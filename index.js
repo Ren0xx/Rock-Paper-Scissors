@@ -3,6 +3,7 @@ function computerPlay(){
     return myArray[Math.floor(Math.random() * myArray.length)];
 }
 function playRound(playerSelection, computerPlay){
+    playerSelection = playerSelection.toUpperCase();
     const choices = ['ROCK', 'PAPER', 'SCISSORS'];
     if ((playerSelection === computerPlay)) {
         return "It's a draw";
@@ -18,52 +19,31 @@ function playRound(playerSelection, computerPlay){
     }
 }
 
-function playerChoice(){
-        try{
-            let player = prompt("What do you choose?").toUpperCase();
+// function playerChoice(){
+//         try{
+//             let player = prompt("What do you choose?").toUpperCase();
        
-        const computer = computerPlay();
+//         const computer = computerPlay();
 
-        console.log('You chose: ' + player);
-        console.log('Computer chose: ' + computer);  
+//         console.log('You chose: ' + player);
+//         console.log('Computer chose: ' + computer);  
         
-        return [player, computer];
+//         return [player, computer];
 
-        }
-        catch(err){
-            alert('Something went wrong!... Please try again')
-        }
+//         }
+//         catch(err){
+//             alert('Something went wrong!... Please try again')
+//         }
 
-}
-function game(){
-    let playerScore = 0;
-    let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
+// }
+const buttons = document.querySelectorAll('button');
 
-        const [player, computer] = playerChoice();
-               
+buttons.forEach((button) => {
 
-        console.log(playRound(player, computer));
-        let result = playRound(player, computer);
+    button.addEventListener('click', () => {
+        const choice = button.firstChild.textContent;
+        playRound(choice, computerPlay());
+        console.log(playRound(choice, computerPlay()));
+    });
+});
 
-        if (result.includes("lose")){
-                computerScore++;
-            }
-        else if (result.includes("win")){
-                playerScore++;
-        }
-
-        console.log(`Results: \nComputer: ${computerScore}, You : ${playerScore}`);
-    }
-    if (playerScore > computerScore){
-        console.log('You won the whole game!');
-    }
-    else if (computerScore > playerScore){
-        console.log("Computer won :(. Mission Failed, we will get'em next time");
-        }
-    else {
-        console.log("Result is ... : draw ? ");
-    }    
-}
-
-game();

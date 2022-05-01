@@ -1,9 +1,11 @@
+//query selectors
 const result = document.querySelector('.result');
 const buttons = document.querySelectorAll('button');
 
 const playerScore = document.querySelector('#score--player');
 const computerScore = document.querySelector('#score--computer');
 
+//scores 
 playerScore.textContent = 0;
 computerScore.textContent = 0;
 
@@ -39,22 +41,16 @@ function restart(){
     }
 
 }
-
 function playGame()
-{
-    
+{    
     buttons.forEach((button) => {
-
-    button.addEventListener('click', () => {        
-        choice = button.firstChild.textContent;                
-        getWinner(choice, computerPlay());        
-        restart();                     
-        });
-    }); 
-    
+        button.addEventListener('click', () => {        
+            choice = button.firstChild.textContent;                
+            getWinner(choice, computerPlay());        
+            restart();                     
+            });
+    });     
 }
-
-
 function computerPlay(){
     const myArray = ['ROCK', 'PAPER', 'SCISSORS'];
     return myArray[Math.floor(Math.random() * myArray.length)];

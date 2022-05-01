@@ -1,5 +1,5 @@
 # Rock-paper-scissors
-##Simple rock-paper-scissors game written in Javascript.
+## Simple rock-paper-scissors game written in Javascript.
 This version contains UI now.
 
 We play the game by clicking one of the three buttons.

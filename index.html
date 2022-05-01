@@ -7,16 +7,24 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <div id="container">
-            <button>Rock</button>
-            <button>Paper</button>
-            <button>Scissors</button>
-            <div id="display">
-                
-            </div>
+        <div class="buttons">
+            <button class="button" id="btn1">Rock</button>
+            <button class="button" id="btn2">Paper</button>
+            <button class="button" id="btn3">Scissors</button>
         </div>
+            <div class="display">
+                <h2 class="result">Let's Play! &#127918;</h3>
+                <div class="scores">
+                    <h4>Player Score: </h4> <h4 id="score--player"></h4>
+                    <h4>Computer Score: </h4> <h4 id="score--computer"></h4>
+                </div>   
+            </div>
+        <div class="restart"></div>
         <script src="index.js" async defer></script>
     </body>
 </html>

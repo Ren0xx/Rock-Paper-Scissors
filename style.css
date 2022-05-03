@@ -16,7 +16,7 @@ body{
     align-items: center;
     justify-content: center;
     border: 3px solid black;
-    border-radius: 5px;
+    border-radius: 35px;
     width: 65rem;
     height: 20rem;
     background-color: #7986cb;
@@ -28,27 +28,26 @@ body{
     display: flex;
     flex-direction: row;
     gap: 2.5em;
+    letter-spacing: 1px;
 }
 .button {
     display: inline-flex;
-    height: 5em;
-    width: 12em;
+    height: 3em;
+    width: 10em;
     border: 2px solid #949393;
     border-radius: 15px;
     margin: 20px 20px 20px 20px;
     color: hsl(180, 2%, 42%);
     text-transform: uppercase;
-    text-decoration: none;
     font-size: 1.25em;
     letter-spacing: 1.5px;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
-#btn3, #btn2, #btn1 {
-    position: relative;
-    overflow: hidden;
     cursor: pointer;
 }
-
-
+#rock, #paper, #scissors {
+    position: relative;
+    overflow: hidden;
+    font-size: 25px;
+}

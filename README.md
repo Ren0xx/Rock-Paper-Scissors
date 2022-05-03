@@ -3,5 +3,5 @@
 This version contains UI now.
 
 We play the game by clicking one of the three buttons.
-The game is played until one of the players acquire 5 points.
-Then, we can play again, until the end of days.
+The game is played until one of the players acquire 5 (by default) points.
+Then, we can play again, as long we want to.
